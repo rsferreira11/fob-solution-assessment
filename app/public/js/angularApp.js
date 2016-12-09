@@ -8,14 +8,13 @@ angularApp.controller('loginController', ['$scope', '$http', function ($scope, $
     $scope.password = '';
     
     $scope.submit = function(){
-        console.log($scope.username, $scope.password);
             var data = {
                 "username": $scope.username,
                 "password": $scope.password
             };
         
             $http.post(
-                "http://localhost:3000/api/login",
+                "/api/login",
                 data
             )
             .then(function successCallback(res){
