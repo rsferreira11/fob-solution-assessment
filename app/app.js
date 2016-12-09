@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-process.env.PORT = 3000;
+process.env.PORT = 8080;
 var port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(__dirname + '/public'));
@@ -28,3 +28,4 @@ app.post('/api/login', function(req, res){
 });
 
 app.listen(port);
+console.log('Running on http://localhost:' + port);
