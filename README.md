@@ -4,7 +4,7 @@
 
 at project directory run:
 ```
-docker build -t nodejs
+docker build -t nodejs .
 docker run -p 49160:8080 -d nodejs
 ```
 
